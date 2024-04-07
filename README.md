@@ -15,16 +15,9 @@ Define block attributes for testimonial data such as name, position, and testimo
 
 ## Installation
 
-1. Download the plugin ZIP file from the [releases page](https://github.com/carmelocutrera/custom-gutenberg-block/releases/tag/latest)
+1. Download the plugin ZIP file from the [main](https://github.com/oracolo81/custom-gutenberg-block/archive/refs/heads/main.zip)
 2. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 3. Activate the plugin through the 'Plugins' screen in WordPress.
-
-## Deployment
-
-1. Install dependencies: `cd custom-gutenberg-block-plugin && npm install`
-2. To run the plugin in development mode: `npm start`
-3. To create the production code: `npm run build`
-4. To run unit test: `npm test`
 
 ## Usage
 
@@ -36,3 +29,10 @@ Define block attributes for testimonial data such as name, position, and testimo
 3. Integrate a Custom Testimonial Block accessible within the Widgets section of the Gutenberg block editor.
 
 ![](/assets/screenshot-1.png)
+
+## Development
+
+1. Install dependencies: `cd custom-gutenberg-block-plugin && npm install`
+2. To run the plugin in development mode: `npm start`
+3. To create the production code: `npm run build`
+4. To run unit test: `npm test`
