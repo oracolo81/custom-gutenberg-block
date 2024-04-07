@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-custom-gutenberg-block {
+	background-color: #ffffff;
+	border-radius: 1rem;
+	color: #2f2670;
+	padding: 0px;
+	.testimonial-content {
+		padding: 30px;
+		img {
+			float: left;
+      		height: 90px;
+			max-width: 90px;
+			margin-right: 20px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+		blockquote {
+			margin: 0;
+		}
+		blockquote::before {
+			content: '\201C';
+		}
+		blockquote::after {
+			content: '\201D';
+		}
+	}
+	.testimonial-footer {
+		text-align: right;
+		padding: 0px 30px 30px;
+		.testimonial-name {
+			font-weight: bold;
+		}
+		.testimonial-position {
+			margin-left: 10px;
+		}
+	}
+}
