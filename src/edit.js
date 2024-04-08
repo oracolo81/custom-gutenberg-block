@@ -13,6 +13,9 @@ import { __ } from '@wordpress/i18n';
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
+/**
+ * This hook enables components to subscribe to changes in the WordPress data store.
+ */
 import { useSelect } from '@wordpress/data';
 
 /**
@@ -34,11 +37,13 @@ import './editor.scss';
 export default function Edit({ attributes, setAttributes, context }) {
 	const blockProps = useBlockProps();
 
+	// getCurrentPost() is called to retrieve the current post being edited in the block editor, is stored in the post constant.
 	const post = useSelect(
 		( select ) => select( 'core/editor' ).getCurrentPost(),
 		[]
 	);
-	// Check if post.acf is available
+	
+	// Check if post.acf is available and set the attributes.
 	if (post && post.acf) {
 		setAttributes( { name: post.acf.name } );
 		setAttributes( { position: post.acf.position } );

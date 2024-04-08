@@ -36,3 +36,31 @@ Define block attributes for testimonial data such as name, position, and testimo
 2. To run the plugin in development mode: `npm start`
 3. To create the production code: `npm run build`
 4. To run unit test: `npm test`
+
+## Functionality Explanation
+
+The following code implements logic to dynamically populate the Gutenberg block with data fetched from custom fields.
+
+```
+    /**
+    * This hook enables components to subscribe to changes in the WordPress data store.
+    */
+    import { useSelect } from '@wordpress/data';
+
+    // getCurrentPost() is called to retrieve the current post being edited in the block editor, is stored in the post constant.
+    const post = useSelect(
+		( select ) => select( 'core/editor' ).getCurrentPost(),
+		[]
+	);
+
+	// Check if post.acf is available and set the attributes.
+	if (post && post.acf) {
+		setAttributes( { name: post.acf.name } );
+		setAttributes( { position: post.acf.position } );
+		setAttributes( { content: post.acf.content } );
+	}
+```
+
+## Future Improvement
+
+An enhancement could be readily applied by using the "Repeater" field functionality provided by ACF Pro. This feature enables the creation of multiple testimonials for each post type. Subsequently, these testimonials can be displayed on the page within a carousel.
