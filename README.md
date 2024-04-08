@@ -68,3 +68,7 @@ if (post && post.acf) {
 
 1. An easy improvement can be made by utilizing the unique "Repeater" field feature offered by ACF Pro. With this capability, it becomes possible to generate multiple testimonials for each post type. These testimonials can then be showcased on the page using a carousel layout.
 2. Another improvement could involve adding an optional field for images and restricting the content field to raw text only.
+
+## Note
+
+This Plugin was developed using @wordpress/create-block
