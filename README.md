@@ -1,6 +1,7 @@
 # Custom Gutenberg Block Plugin
 
 Custom Gutenberg Block Plugin is a WordPress Plugin that allows you to create Testimonial Gutenberg blocks for your website.
+This version provides a simplified approach, accommodating only one testimonial per post type. However, for enhanced functionality, it's feasible to implement a more robust solution utilizing the "Repeater" field available in ACF Pro. This would enable the rendering of testimonials within a carousel, offering a more dynamic presentation.
 
 ## Features
 
@@ -43,8 +44,8 @@ The following code implements logic to dynamically populate the Gutenberg block 
 
 ```js
 /**
-* This hook enables components to subscribe to changes in the WordPress data store.
-*/
+ * This hook enables components to subscribe to changes in the WordPress data store.
+ */
 import { useSelect } from '@wordpress/data';
 
 // getCurrentPost() is called to retrieve the current post being edited in the block editor, is stored in the post constant.
