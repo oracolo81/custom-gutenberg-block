@@ -42,7 +42,7 @@ export default function Edit({ attributes, setAttributes, context }) {
 		( select ) => select( 'core/editor' ).getCurrentPost(),
 		[]
 	);
-	
+
 	// Check if post.acf is available and set the attributes.
 	if (post && post.acf) {
 		setAttributes( { name: post.acf.name } );

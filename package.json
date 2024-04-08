@@ -16,6 +16,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
+		"@testing-library/jest-dom": "^6.4.2",
 		"@testing-library/react": "^14.2.2",
 		"@wordpress/block-editor": "^12.23.0",
 		"@wordpress/data": "^9.25.0",
